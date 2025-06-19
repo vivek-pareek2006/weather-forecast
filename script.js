@@ -17,9 +17,11 @@ cityInput.addEventListener("input", async () => {
 
     suggestion.innerHTML = ""; // Clear previous suggestions
 
-    data.forEach(city => {
+    data.forEach((city) => {
       const div = document.createElement("div");
-      div.textContent = `${city.name}${city.state ? ", " + city.state : ""}, ${city.country}`;
+      div.textContent = `${city.name}${city.state ? ", " + city.state : ""}, ${
+        city.country
+      }`;
 
       div.addEventListener("click", () => {
         cityInput.value = `${city.name},${city.country}`;
@@ -73,10 +75,33 @@ async function getWeather() {
         `Wind Speed: ${wind} m/s\n` +
         `Description: ${desc}`;
     } else {
-      document.getElementById("output").innerText = "Weather data not available.";
+      document.getElementById("output").innerText =
+        "Weather data not available.";
     }
   } catch (error) {
-    document.getElementById("output").innerText = "Error fetching weather data.";
+    document.getElementById("output").innerText =
+      "Error fetching weather data.";
     console.error(error);
   }
 }
+lottie.loadAnimation({
+  container: document.getElementById("cloud-animation-1"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "cloud_animation.json", 
+});
+lottie.loadAnimation({
+  container: document.getElementById("cloud-animation-2"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "cloud_animation.json", 
+});
+lottie.loadAnimation({
+  container: document.getElementById("sun-animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "sun_animation.json", 
+});

@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="main">
-    <div class="box">
-      <label for="city">City Name:</label>
-      <input id="city" type="text" placeholder="e.g. Noida or Delhi,IN" autocomplete="off" />
-      <div id="suggestions" class="suggestions-box"></div>
-      <button onclick="getWeather()">Get Weather</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+    <div id="main">
+      <div id="cloud-animation-1"></div>
+      <div id="cloud-animation-2"></div>
+      <div id="sun-animation"></div>
+      <div class="box">
+        <label for="city">City Name:</label>
+        <input
+          id="city"
+          type="text"
+          placeholder="e.g. Noida or Delhi,IN"
+          autocomplete="off"
+        />
+        <div id="suggestions" class="suggestions-box"></div>
+        <button onclick="getWeather()">Get Weather</button>
+      </div>
+      <div class="info">
+        <h2>Weather Info:</h2>
+        <pre id="output"></pre>
+      </div>
     </div>
-    <div class="info">
-      <h2>Weather Info:</h2>
-      <pre id="output"></pre>
-    </div>
-  </div>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
