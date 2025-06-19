@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(217, 239, 243);
+}
+
+.box {
+  border: 2px solid black;
+  width: 270px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+}
+
+.box label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+  
+}
+
+#city {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid rgb(253, 237, 237);
+  border-radius: 5px;
+  
+}
+
+.box button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: beige;
+  border: 1px solid rgb(253, 237, 237);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+}
+
+.box button:hover {
+  background-color: grey;
+}
+
+.suggestions-box {
+  position: absolute;
+  top: 90px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-height: 120px;
+  overflow-y: auto;
+  border: 1px solid whitesmoke;
+  background-color: white;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.suggestions-box div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions-box div:hover {
+  background-color: rgb(233, 227, 227);
+}
+
+.info {
+  margin-top: 30px;
+  padding: 16px;
+  width: 280px;
+  text-align: left;
+  background-color: wheat;
+  border: 2px solid rgb(224, 206, 206);
+  border-radius: 10px;
+}
+
+.info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#output {
+  font-size: 16px;
+  white-space: pre-line; 
+}
